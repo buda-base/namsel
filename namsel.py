@@ -319,7 +319,7 @@ if __name__ == '__main__':
                 outmessage = '''OCR text\n\n'''
                 outfile.write(outmessage)
                 outfile.write(os.path.basename(args.imagepath)+'\n')
-                if not isinstance(results, str) or not isinstance(results, unicode):
+                if not isinstance(results, (str, unicode)):
                     results = 'No content captured for this image'
                     print '****************'
                     print results
